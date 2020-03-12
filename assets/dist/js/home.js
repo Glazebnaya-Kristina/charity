@@ -34,32 +34,3 @@ $(document).ready(function () {
     ]
   });
 });
-
-
-// $(document).ready(function () {
-//   $('.projects__child').slick({
-//     // arrows: false,
-//     // mobileFirst: true,
-//     dots: false,
-//     slidesToShow: 4,
-//     appendArrows: $('.projects__controls-buttons'),
-//     prevArrow: '<button class="arrow arrow--prev projects__controls-button slick-prev"><i class="icon-arrowLeft"></i></button>',
-//     nextArrow: '<button class="arrow arrow--next projects__controls-button slick-next"><i class="icon-arrowright"></i></button>',
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 2,
-//         }
-//       },
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           rows: 4,
-//           // slidesPerRow: 1,
-//           // slidesToShow: 1,
-//         }
-//       },
-//     ]
-//   });
-// });

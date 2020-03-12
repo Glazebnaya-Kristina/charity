@@ -17,6 +17,7 @@
 // поключения секций
 @import "sections/index/main-banner";
 @import "sections/index/projects";
+@import "sections/index/pages";
 
 
 
@@ -27,7 +28,10 @@
       background-image: url('../img/index/bg-main.jpg');
       background-repeat: no-repeat;
       background-position: top center;
-      background-size: cover;
+      background-size: 100% 2700px;
+    }
+    @media (min-width: $screen-1280) {
+      background-size: 100% 2980px;
     }
     &:after{
       @include pseudo;

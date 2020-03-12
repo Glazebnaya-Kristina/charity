@@ -44,6 +44,7 @@
     &:hover,
     &:focus{
       background-color: $color-red-hover;
+      box-shadow: 0 9px 13px rgba(255, 108, 83, 0.53);
     }
   }
 
