@@ -1,0 +1,31 @@
+.link{
+  @include font-primary(14px, $color-grey, 400);
+  text-decoration: underline;
+  text-decoration-color: $color-grey;
+  &:hover,
+  &:focus{
+    color: $color-blue;
+    text-decoration-color: $color-blue;
+  }
+
+  &--blue{
+    color: $color-blue;
+    text-decoration: transparent;
+    &:hover,
+    &:focus{
+      color: $color-blue-hover;
+      text-decoration: underline;
+      text-decoration-color: $color-blue-hover;
+    }
+  }
+
+  &--white{
+    color: rgba($white, .7);
+    text-decoration-color: $white;
+    &:hover,
+    &:focus{
+      color: $white;
+      text-decoration-color: $white;
+    }
+  }
+}

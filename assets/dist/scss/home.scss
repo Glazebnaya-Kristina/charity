@@ -1,0 +1,16 @@
+@import "helper/variables";
+@import "helper/container-mixins";
+@import "helper/mixins";
+@import "helper/animations";
+
+// Подключения блоков
+
+// поключения библиотек
+//@import "libs/slick";
+
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// поключения секций
+//@import "sections/cases/cases";

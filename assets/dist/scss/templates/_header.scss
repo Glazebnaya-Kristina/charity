@@ -1,0 +1,126 @@
+.header {
+  $block-name: &; // #{$block-name}__element
+
+  padding: 10px 0;
+  background-image: url('../img/index/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  @media (min-width: $screen-1024) {
+    padding: 12px 0;
+  }
+  &__inner{
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: $screen-768) {
+      padding: 0 2%;
+    }
+    @media (min-width: $screen-1280) {
+      padding: 0 5%;
+    }
+  }
+
+  &__navigation{
+    flex-shrink: 0;
+    @media (min-width: $screen-1024) {
+      display: flex;
+      justify-content: flex-end;
+      flex-shrink: inherit;
+      width: 100%;
+    }
+  }
+
+  &__logo{
+    flex-shrink: 0;
+  }
+
+  &__label{
+    width: auto;
+    margin-left: auto;
+    @media (min-width: $screen-1024) {
+      justify-self: flex-end;
+      margin-left: 0;
+    }
+  }
+
+  &__input{
+    padding: 0 5px;
+    padding-right: 10px;
+    background-position: center right 10px;
+    background-size: 12px 12px;
+    @media (min-width: $screen-1024) {
+      padding: 5px 10px;
+    }
+
+    @media (min-width: $screen-desc) {
+      max-width: 210px;
+      padding: 12.2px 15px;
+      padding-right: 35px;
+      background-position: center right 10px;
+      background-size: 20px 20px;
+    }
+
+    &:focus,
+    &:hover{
+      @media (min-width: $screen-1024) {
+        max-width: 120px;
+      }
+      @media (min-width: $screen-desc) {
+        max-width: 210px;
+      }
+    }
+  }
+
+  &__button-entrance{
+    &--mobile{
+      margin-left: 5px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      @media (min-width: $screen-1024) {
+        display: none;
+      }
+
+      i{
+        color: $color-blue-hover;
+      }
+    }
+    &--desktop{
+      display: none;
+      @media (min-width: $screen-1024) {
+        display: block;
+        max-width: 120px;
+        padding: 5px 15px;
+      }
+      @media (min-width: $screen-desc) {
+        max-width: 210px;
+        padding: 11.2px 15px;
+      }
+    }
+  }
+
+  &__burger{
+    margin-left: 15px;
+  }
+
+  &__action{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    @media (min-width: $screen-1024) {
+      display: grid;
+      grid-template-columns: 120px 120px;
+      grid-gap: 15px;
+    }
+    @media (min-width: $screen-desc) {
+      display: grid;
+      grid-template-columns: 210px 210px;
+      grid-gap: 31px;
+      margin-left: 10px;
+    }
+  }
+
+}

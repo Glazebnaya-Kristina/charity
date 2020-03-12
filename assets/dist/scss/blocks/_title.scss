@@ -1,0 +1,28 @@
+.title {
+  position: relative;
+  max-width: 170px;
+  margin: 0;
+  padding-top: 19px;
+  @include font-primary(30px, false, 400);
+
+  @media (min-width: $screen-1024) {
+    max-width: none;
+    font-size: 32px;
+  }
+
+  &:after{
+    @extend %base-line-text;
+    top: 0;
+    left: 0;
+  }
+
+  &--white{
+    color: $white;
+    &:after{
+      @extend %base-line-text;
+      background-color: $white;
+      top: 0;
+      left: 0;
+    }
+  }
+}

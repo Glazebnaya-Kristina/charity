@@ -1,0 +1,11 @@
+@import "mixins";
+@import "variables";
+
+
+%base-line-text {
+  @include pseudo;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $color-blue;
+}

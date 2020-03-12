@@ -1,0 +1,140 @@
+.form {
+  $block-name:                &; // #{$block-name}__element
+
+  width: 100%;
+
+  &__fieldset {
+    min-width: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  &__legend {
+    display: block;
+    width: 100%;
+    max-width: 100%; // Привет IE
+    margin-top: 0;
+    margin-bottom: $typo-margin-vertical;
+    font-size: 14px;
+    font-family: $font-family;
+    font-weight: 700;
+    line-height: $line-height;
+    white-space: normal; // Привет IE
+    color: inherit;
+    &--hidden{
+      @include hide-text;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+  }
+}
+
+.label {
+  display: flex;
+  width: 100%;
+  &--search{
+    position: relative;
+  }
+
+  &__name {
+    @include hide-text;
+  }
+
+  //&__icon {
+  //  &--search {
+  //    position: absolute;
+  //    right: 15px;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //  }
+  //}
+}
+
+
+.input{
+  width: 100%;
+  padding: 20px 30px;
+  font: inherit;
+  //color: $text-color-gray-lighten;
+  background-color: $white;
+  //border-radius: 4px;
+  border: none;
+  //border: 1px solid $color-gold;
+  transition: $transition-time;
+
+  &:focus{
+    outline: 0;
+    //border: 1px solid $color-gold-dark;
+  }
+
+  @include placeholder{
+    //color: $text-color-gray-lighten;
+    font-size: 16px;
+  }
+
+  &--search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 12.2px 15px;
+    padding-right: 50px;
+    max-width: 50px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-blue-hover;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: transparent;
+    background-image: url('../img/research.svg');
+    background-repeat: no-repeat;
+    background-position: center right 25px;
+    background-size: 20px 20px;
+    outline: none;
+    transition: $transition-time;
+    transform-origin: right;
+    @media (min-width: $screen-desc) {
+      padding-right: 35px;
+      background-position: center right 10px;
+      background-size: 20px 20px;
+    }
+
+    &:hover,
+    &:focus{
+      max-width: 210px;
+      border-color: #096b94;
+    }
+  }
+
+  //&--textarea{
+  //  resize: none;
+  //  border-radius: 0;
+  //  //border: 1px solid $color-grey-input-textarea;
+  //  &:focus{
+  //    outline: 0;
+  //    border: 1px solid #bdbdbd;
+  //  }
+  //}
+}
+
+
+.text-error{
+  display: block;
+  margin-left: 15px;
+  font-size: 14px;
+  //color: $color-error;
+  opacity: 0;
+
+  &--active{
+    opacity: 1;
+  }
+}
+
+.error{
+  //border: 1px solid $color-error;
+}
+

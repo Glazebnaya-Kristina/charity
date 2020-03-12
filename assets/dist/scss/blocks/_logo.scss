@@ -1,0 +1,6 @@
+.logo{
+  @include font-primary(18px, $white, 300);
+  &__bold{
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,101 @@
+.button {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12.2px 15px;
+  max-width: 210px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: $white;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+  background-color: $color-blue;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: $transition-time;
+  outline: none;
+  &:hover,
+  &:focus{
+    box-shadow: 0 9px 13px rgba(75, 175, 220, 0.53);
+  }
+
+  &--red{
+    background-color: $color-red;
+    &:hover,
+    &:focus{
+      box-shadow: 0 9px 13px rgba(183, 55, 34, 0.55);
+    }
+  }
+
+  &--red-shadow{
+    background-color: $color-red;
+    box-shadow: 0 9px 13px rgba(255, 108, 83, 0.53);
+    &:hover,
+    &:focus{
+      background-color: $color-red-hover;
+    }
+  }
+
+  &--white{
+    color: $color-blue;
+    background-color: $white;
+    &:hover,
+    &:focus{
+      color: $white;
+      background-color: $color-blue;
+      box-shadow: none;
+    }
+  }
+
+  &--border{
+    padding: 11.2px 15px;
+    color: $color-blue-hover;
+    border: 1px solid #096b94;
+    background-color: transparent;
+    &:hover,
+    &:focus{
+      color: $white;
+      background-color: $color-blue-hover;
+      box-shadow: none;
+    }
+  }
+
+  &--big{
+    padding: 19.2px 15px;
+  }
+
+  &--small{
+    max-width: 105px;
+    padding: 12.2px 15px;
+    @include font-primary(18px, $text-color, 300);
+    background-color: $white;
+
+    &:hover,
+    &:focus{
+      box-shadow: 0 9px 13px rgba(9, 107, 148, 0.53);
+    }
+  }
+
+  &--middle{
+    max-width: 170px;
+    padding: 12.2px 15px;
+    @include font-primary(18px, $white, 300);
+    background-color: $color-blue-hover;
+
+    &:hover,
+    &:focus{
+      box-shadow: 0 9px 13px rgba(9, 107, 148, 0.53);
+    }
+  }
+}

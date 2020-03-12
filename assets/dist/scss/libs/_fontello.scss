@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?48529630');
+  src: url('../fonts/fontello.eot?48529630#iefix') format('embedded-opentype'),
+  url('../fonts/fontello.woff2?48529630') format('woff2'),
+  url('../fonts/fontello.woff?48529630') format('woff'),
+  url('../fonts/fontello.ttf?48529630') format('truetype'),
+  url('../fonts/fontello.svg?48529630#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i{
+  display: flex;
+}
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: flex;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrowLeft:before { content: '\e800'; } /* '' */
+.icon-arrowright:before { content: '\e801'; } /* '' */
+.icon-avatar:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+.icon-burger:before { content: '\e804'; } /* '' */
+.icon-close:before { content: '\e805'; } /* '' */

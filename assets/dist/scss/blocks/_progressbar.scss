@@ -1,0 +1,42 @@
+.progressbar {
+  $block-name: &; // #{$block-name}__element
+  display: flex;
+  height: 18px;
+  border-radius: 50px;
+  background-color: $color-grey-light;
+  &__fill {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 50px;
+    background-color: $color-blue;
+    transition: width .6s ease;
+  }
+
+  &__percent {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 30px;
+    @include font-primary(14px, $color-blue, 400);
+    border-radius: 10px;
+    box-shadow: -1px 9px 13px rgba(75, 175, 220, 0.53);
+    background-color: $white;
+  }
+
+  &--red{
+    background-color: $color-pink;
+    #{$block-name}__fill{
+      background-color: $color-red-hover;
+    }
+    #{$block-name}__percent{
+      color: $color-red-hover;
+    }
+  }
+}
