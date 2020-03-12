@@ -1,0 +1,99 @@
+.projects{
+  padding: 68px 0 65px;
+  background-color: #fafafa;
+  @media (min-width: $screen-768) {
+    background-color: transparent;
+  }
+  @media (min-width: $screen-1400) {
+    padding: 98px 0 15px;
+  }
+  &__inner{
+    @include container;
+    position: relative;
+    @media (min-width: $screen-768) {
+      padding: 0 20px;
+    }
+    @media (min-width: $screen-1280) {
+      padding: 0 95px;
+      padding-left: 79px;
+    }
+  }
+
+  &__child{
+    margin: 0 -10px;
+    margin-top: 26px;
+    @media (min-width: $screen-768) {
+      margin: 0 -30px;
+      margin-top: 26px;
+    }
+    @media (min-width: $screen-1280) {
+      margin-top: 32px;
+    }
+
+    .slick-list{
+      padding-bottom: 30px;
+      @media (min-width: $screen-768) {
+        padding: 0 15px;
+        padding-bottom: 55px;
+      }
+    }
+    .slick-slide{
+      outline: none;
+      opacity: 0;
+      transition: $transition-time;
+      div{
+        &:not(:first-child){
+          margin-top: 15px;
+        }
+      }
+    }
+    .slick-slide.slick-active{
+      opacity: 1;
+    }
+  }
+
+  &__controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    @media (min-width: $screen-768) {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      flex-direction: row-reverse;
+    }
+    @media (min-width: $screen-1280) {
+      top: 16px;
+      right: 95px;
+    }
+  }
+
+  &__controls-buttons{
+    @include ul-reset;
+    display: flex;
+    align-items: center;
+    @media (min-width: $screen-768) {
+      margin-left: 30px;
+    }
+  }
+
+  &__controls-button{
+    &:not(:first-child){
+      margin-left: 25px;
+    }
+  }
+
+  .slick-disabled {
+    opacity: .4;
+    pointer-events: none;
+    transition: $transition-time;
+  }
+
+  &__link-more{
+    margin-top: 30px;
+    @media (min-width: $screen-768) {
+      margin-top: 0;
+    }
+  }
+}

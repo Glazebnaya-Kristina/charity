@@ -31,7 +31,7 @@
   }
 
   &--red{
-    background-color: $color-red;
+    background-color: $color-red-hover;
     &:hover,
     &:focus{
       box-shadow: 0 9px 13px rgba(183, 55, 34, 0.55);
@@ -73,6 +73,7 @@
 
   &--big{
     padding: 19.2px 15px;
+    max-width: 255px;
   }
 
   &--small{

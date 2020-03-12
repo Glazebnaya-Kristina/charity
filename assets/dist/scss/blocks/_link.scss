@@ -2,6 +2,7 @@
   @include font-primary(14px, $color-grey, 400);
   text-decoration: underline;
   text-decoration-color: $color-grey;
+  letter-spacing: 0.7px;
   &:hover,
   &:focus{
     color: $color-blue;

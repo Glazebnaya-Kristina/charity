@@ -5,9 +5,10 @@
 @import "helper/template";
 
 // Подключения блоков
+@import "blocks/child";
 
 // поключения библиотек
-//@import "libs/slick";
+@import "libs/slick";
 
 // стили шаблонов
 @import "templates/header";
@@ -15,12 +16,19 @@
 
 // поключения секций
 @import "sections/index/main-banner";
+@import "sections/index/projects";
 
 
 
 .page{
   &__body{
     position: relative;
+    @media (min-width: $screen-768) {
+      background-image: url('../img/index/bg-main.jpg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
     &:after{
       @include pseudo;
       z-index: -10;
@@ -34,6 +42,9 @@
       background-size: cover;
       @media (min-width: $screen-768) {
         height: 450px;
+      }
+      @media (min-width: $screen-1400) {
+        height: 614px;
       }
     }
   }

@@ -10,9 +10,9 @@
   background-color: $color-grey-light;
   outline: none;
   transition: $transition-time;
+  cursor: pointer;
 
-  &:hover,
-  &:focus{
+  &:hover{
     background-color: $color-blue;
 
     i{
@@ -22,6 +22,6 @@
 
   i{
     color: $color-grey;
-    font-size: 12px;
+    font-size: 9px;
   }
 }
