@@ -13,4 +13,27 @@
 @import "templates/footer";
 
 // поключения секций
-//@import "sections/cases/cases";
+@import "sections/index/main-banner";
+
+
+
+.page{
+  &__body{
+    position: relative;
+    &:after{
+      @include pseudo;
+      z-index: -10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 393px;
+      background-image: url('../img/index/main-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      @media (min-width: $screen-768) {
+        height: 450px;
+      }
+    }
+  }
+}

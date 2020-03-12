@@ -1,0 +1,93 @@
+.main-banner{
+  margin: 0 10px;
+  margin-top: 1px;
+  padding: 40px 10px 43px;
+  border-radius: 30px;
+
+  background-image: url('../img/index/main-banner-mob.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-width: $screen-768) {
+    margin: 0 5%;
+    padding: 80px 10px 130px;
+    background-image: url('../img/index/main-banner.jpg');
+    background-position: bottom center;
+  }
+
+
+  @media (min-width: $screen-1280) {
+    margin: 0 10%;
+    padding: 121px 0 218px;
+  }
+
+  @media (min-width: 1900px) {
+    margin: 0 12%;
+  }
+
+  &__inner{
+    @media (min-width: $screen-768) {
+      @include container;
+      padding: 0 20px !important;
+    }
+    @media (min-width: $screen-1280) {
+      padding: 0 95px !important;
+      padding-left: 79px !important;
+    }
+  }
+
+  &__title{
+    max-width: 300px;
+    margin: 0 auto;
+    @include font-primary(30px, $color-blue-hover, 500);
+    text-align: center;
+    line-height: 33px;
+
+    @media (min-width: $screen-768) {
+      margin: 0;
+      text-align: left;
+    }
+    @media (min-width: $screen-1400) {
+      max-width: 440px;
+      font-size: 48px;
+      line-height: 62px;
+    }
+  }
+
+  &__description{
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 24px;
+    @include font-primary(14px, $color-grey, 300);
+    text-align: center;
+    @media (min-width: $screen-768) {
+      margin: 0;
+      margin-top: 24px;
+      margin-left: 20px;
+      text-align: left;
+    }
+    @media (min-width: $screen-1400) {
+      max-width: 390px;
+      margin-top: 35px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__row-buttons{
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 158px;
+    @media (min-width: $screen-768) {
+      grid-template-columns: 210px 210px;
+      margin-top: 60px;
+    }
+  }
+
+  &__button{
+    justify-self: center;
+    @media (min-width: $screen-768) {
+      justify-self: start;
+    }
+  }
+}
