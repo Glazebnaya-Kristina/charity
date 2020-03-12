@@ -26,13 +26,14 @@
   }
 
   &__inner{
+    @include container;
+    padding: 0;
     @media (min-width: $screen-768) {
-      @include container;
-      padding: 0 20px !important;
+      padding: 0 20px;
     }
     @media (min-width: $screen-1280) {
-      padding: 0 95px !important;
-      padding-left: 79px !important;
+      padding: 0 95px;
+      padding-left: 79px;
     }
   }
 
