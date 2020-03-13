@@ -1,0 +1,74 @@
+.aid{
+  padding: 27px 0 69px;
+  @media (min-width: $screen-1280) {
+    padding: 46px 0 100px;
+  }
+  &__inner{
+    @include container;
+    width: auto;
+    margin: 0 10px;
+    padding: 63px 20px;
+    border-radius: 30px;
+    background-color: $color-blue;
+    background-image: url('../img/index/aid.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-width: $screen-768) {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 63px 20px;
+    }
+
+    @media (min-width: $screen-1280) {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+      padding: 50px 50px;
+    }
+
+    @media (min-width: $screen-desc) {
+      grid-template-columns: 435px 545px;
+      grid-column-gap: 90px;
+      width: 1281px;
+      padding: 50px 95px 45px;
+    }
+  }
+
+  &__text{
+    margin-top: 25px;
+    @include font-primary(16px, $white, 300, 24px);
+    @media (min-width: $screen-1024) {
+      max-width: 635px;
+    }
+    @media (min-width: $screen-1280) {
+      max-width: 435px;
+      margin-top: 18px;
+      font-size: 18px;
+    }
+  }
+
+  &__row-buttons{
+    display: grid;
+    justify-items: center;
+    grid-gap: 30px;
+    margin-top: 27px;
+    @media (min-width: $screen-768) {
+      grid-template-columns: repeat(3, 105px) 170px;
+      justify-content: center;
+    }
+    @media (min-width: $screen-1280) {
+      //grid-template-columns: 105px 170px;
+      grid-gap: 10px;
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      align-items: center;
+      margin-top: 0;
+    }
+    @media (min-width: $screen-desc) {
+      justify-content: start;
+      grid-gap: 20px;
+    }
+  }
+}
