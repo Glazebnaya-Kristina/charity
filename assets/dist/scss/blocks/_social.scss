@@ -5,14 +5,56 @@
   display: flex;
   align-items: center;
 
-  a{
+  &__item{
+    &:not(:first-child){
+      margin-left: 17px;
+    }
+  }
+
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: $white;
+    border-radius: 50%;
     &:hover,
     &:focus {
       outline: none;
+      box-shadow: 0 6px 10px rgba(29, 29, 29, 0.2);
     }
   }
 
   &__name {
     @include hide-text;
+  }
+
+  &__icon{
+    font-size: 11px;
+    &--instagram{
+      font-size: 17px;
+      background-image: linear-gradient(-18deg, #ffda78 0%, #f2683c 19%, #cb2f97 63%, #4b62d3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--facebook{
+      font-size: 17px;
+      color: #3d5a98;
+    }
+
+    &--twitter{
+      font-size: 14px;
+      color: #41abe1;
+    }
+
+    &--vk{
+      color: #193694;
+    }
+
+    &--youtube{
+      color: #ed1c24;
+    }
   }
 }

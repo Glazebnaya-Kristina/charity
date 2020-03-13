@@ -4,7 +4,202 @@
 .footer{
   $block-name:                &; // #{$block-name}__element
 
+  padding: 62px 0 30px;
+  color: $color-grey;
+  background-color: $color-grey-light;
+  @media (min-width: $screen-1024) {
+    padding: 65px 0 25px;
+    font-size: 14px;
+  }
+
+  &__inner{
+    @include container;
+    @media (min-width: $screen-desc) {
+      padding: 0 95px;
+      padding-left: 79px;
+    }
+  }
   &__title{
     @include hide-text;
+  }
+
+  &__list{
+    @include ul-reset;
+    @media (min-width: $screen-768) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: $screen-1024) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:not(:last-child){
+      padding-bottom: 30px;
+      border-bottom: 1px solid #d3d3d3;
+      @media (min-width: $screen-1024) {
+        border: none;
+      }
+    }
+
+    @media (min-width: $screen-768) {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &--navigation{
+      padding: 27px 0;
+      @media (min-width: $screen-768) {
+        padding: 0;
+      }
+    }
+
+    &--subscription{
+      padding: 30px 0 0;
+      @media (min-width: $screen-1024) {
+        padding: 0;
+      }
+      @media (min-width: $screen-desc) {
+        margin-left: 92px;
+      }
+    }
+  }
+
+  &__decription-company{
+    margin-top: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    @media (min-width: $screen-768) {
+      margin-left: 20px;
+    }
+  }
+
+  &__name-company{
+    font-weight: 300;
+  }
+
+  &__number-link,
+  &__link-company{
+    &:hover{
+      color: $color-blue;
+    }
+  }
+
+  &__number-company{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 19px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+    @media (min-width: $screen-768) {
+      margin-left: 20px;
+    }
+  }
+
+  &__navigation{
+    @media (min-width: $screen-768) {
+      width: 100%;
+    }
+  }
+
+  &__navigation-list{
+    @include ul-reset;
+    @media (min-width: $screen-768) {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    @media (min-width: $screen-1024) {
+      grid-row-gap: 11px;
+    }
+
+    @media (min-width: $screen-desc) {
+      margin-left: 12px;
+      grid-column-gap: 86px;
+    }
+    li{
+      text-align: center;
+      &:not(:first-child){
+        margin-top: 10px;
+        @media (min-width: $screen-768) {
+          margin-top: 0;
+        }
+      }
+      @media (min-width: $screen-768) {
+        text-align: left;
+      }
+    }
+    a{
+      &:hover{
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__subscription-form{
+    margin-top: 28px;
+    @media (min-width: $screen-desc) {
+      margin-top: 26px;
+    }
+  }
+
+  &__item-subtitle{
+    @include font-primary(16px, #717171, 500);
+    letter-spacing: 1.2px;
+
+    &--social{
+      margin-top: 23px;
+      @media (min-width: $screen-desc) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__social{
+    margin-top: 15px;
+  }
+
+  &__bottom{
+    display: grid;
+    justify-items: center;
+    grid-gap: 11px;
+    margin-top: 22px;
+    @media (min-width: $screen-768) {
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between;
+      width: 100%;
+      text-align: center;
+    }
+    @media (min-width: $screen-1024) {
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: stretch;
+      text-align: left;
+    }
+
+    @media (min-width: $screen-desc) {
+      margin-top: 41px;
+    }
+  }
+
+  &__copyright{
+    color: #adadad;
+    font-size: 14px;
+    @media (min-width: $screen-1024) {
+      text-align: center;
+    }
+  }
+
+  &__bottom-link{
+    &--studio{
+      @media (min-width: $screen-1024) {
+        text-align: right;
+      }
+    }
   }
 }

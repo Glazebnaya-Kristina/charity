@@ -1,32 +1,45 @@
-.link{
+.link {
   @include font-primary(14px, $color-grey, 400);
   text-decoration: underline;
   text-decoration-color: $color-grey;
   letter-spacing: 0.7px;
+
   &:hover,
-  &:focus{
+  &:focus {
     color: $color-blue;
     text-decoration-color: $color-blue;
   }
 
-  &--blue{
+  &--blue {
     color: $color-blue;
     text-decoration: transparent;
+
     &:hover,
-    &:focus{
+    &:focus {
       color: $color-blue-hover;
       text-decoration: underline;
       text-decoration-color: $color-blue-hover;
     }
   }
 
-  &--white{
+  &--white {
     color: rgba($white, .7);
     text-decoration-color: $white;
+
     &:hover,
-    &:focus{
+    &:focus {
       color: $white;
       text-decoration-color: $white;
+    }
+  }
+
+  &--grey {
+    color: #adadad;
+    text-decoration-color: #adadad;
+    &:hover,
+    &:focus {
+      color: #848484;
+      text-decoration-color: #848484;
     }
   }
 }
